@@ -24,6 +24,7 @@ public class MonsterDefeat {
 
 
 
+
     public String getMonsterName() {
         return monsterName;
     }
