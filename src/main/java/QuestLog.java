@@ -46,13 +46,16 @@ public class QuestLog {
     }
 
     public void printSummary() {
+        System.out.println("Quest Log");
+        int counter  = 1;
         for (ScoreEvent sE : events) {
-            System.out.println(sE.getSummary());
-
+            counter++;
+            System.out.println(counter + ". " + sE.getSummary());
         }
+        System.out.println("---------------------");
         System.out.println("Total Score is:" + getTotalScore());
-        for (ScoreEvent sE : events) {
-            System.out.println(sE.getPoints());
-        }
+        System.out.println("Best event: " + getHighestScoringEvent().getSummary());
+        System.out.println("Worst event: " + getLowestScoringEvent().getSummary());
+
     }
 }
